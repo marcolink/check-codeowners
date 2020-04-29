@@ -1,0 +1,10 @@
+*-debug.log
+*-error.log
+/.idea
+/.nyc_output
+/dist
+/lib
+/package-lock.json
+/yarn.lock
+/tmp
+node_modules
