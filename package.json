@@ -19,6 +19,7 @@
   "devDependencies": {
     "@oclif/dev-cli": "^1",
     "@oclif/test": "^1",
+    "@semantic-release/changelog": "^5.0.1",
     "@types/chai": "^4",
     "@types/fs-extra": "^8.1.0",
     "@types/micromatch": "^4.0.1",
@@ -28,6 +29,7 @@
     "chai": "^4",
     "mocha": "^5",
     "nyc": "^14",
+    "semantic-release": "^17.0.7",
     "ts-node": "^8",
     "typescript": "^3.3"
   },
@@ -51,7 +53,33 @@
   "scripts": {
     "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "build": "tsc -b",
+    "presemantic-release": "npm run build",
+    "semantic-release": "semantic-release"
   },
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "type": "build",
+              "scope": "deps",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/changelog",
+      "@semantic-release/github"
+    ]
+  }
 }

@@ -2,6 +2,7 @@ import {expect, test} from '@oclif/test'
 import cmd = require('../src');
 
 describe('check-codeowners', () => {
+  /*
   test
     .stdout()
     .do(() => cmd.run([]))
@@ -15,4 +16,5 @@ describe('check-codeowners', () => {
     .it('runs hello --name jeff', ctx => {
       expect(ctx.stdout).to.contain('hello jeff')
     });
+   */
 });
