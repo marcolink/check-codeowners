@@ -7,6 +7,7 @@ get stats about a repositories codeowners file
 [![Version](https://img.shields.io/npm/v/check-codeowners.svg)](https://npmjs.org/package/check-codeowners)
 [![Downloads/week](https://img.shields.io/npm/dw/check-codeowners.svg)](https://npmjs.org/package/check-codeowners)
 [![License](https://img.shields.io/npm/l/check-codeowners.svg)](https://github.com/marcolink/check-codeowners/blob/master/package.json)
+![Tests](https://github.com/marcolink/check-codeowners/workflows/Semantic%20Release%20CI/badge.svg)
 
 <!-- toc -->
 * [Usage](#usage)
