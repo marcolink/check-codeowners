@@ -16,7 +16,7 @@ class CheckCodeOwners extends Command {
   static args = [{name: 'project'}];
 
   async run() {
-    const {args, flags} = this.parse(CheckCodeOwners);
+    const {args} = this.parse(CheckCodeOwners);
 
     const project = args.project || __dirname;
     const codeOwnersFilePath = path.resolve(project, '.github', 'CODEOWNERS');
