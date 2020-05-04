@@ -1,5 +1,5 @@
-import {CodeOwnersEntry, CodeOwners, parseCodeOwners} from "../src/parse-code-owners";
 import {expect} from "@oclif/test";
+import {CodeOwners, CodeOwnersEntry, parseCodeOwners} from "../src/parse-code-owners";
 
 /*
 const hasPattern = (codeowners: CodeOwnersList, pattern: string): boolean => {

@@ -1,5 +1,6 @@
-import {checkCoverage} from "../src/check-coverage";
 import {CodeOwners} from "../src/parse-code-owners";
+import {checkCoverage} from "../src/check-coverage";
+import {expect} from "@oclif/test";
 
 describe('A check-coverage function', () => {
 
@@ -16,7 +17,7 @@ describe('A check-coverage function', () => {
       {pattern: '*.js', owners: ['marcolink']}
     ];
 
-    checkCoverage(files, codeOwners);
+    expect(checkCoverage(files, codeOwners)).to.length(3);
   })
 
 });
